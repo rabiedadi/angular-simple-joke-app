@@ -1,0 +1,7 @@
+<app-nav-bar></app-nav-bar>
+<div class="jokes-container">
+  <div class="joke-card">
+    <h4>Joke {{ (joke$ | async)?.id || ''}}</h4>
+    <p>{{ (joke$ | async)?.joke || ''}}</p>
+  </div>
+</div>

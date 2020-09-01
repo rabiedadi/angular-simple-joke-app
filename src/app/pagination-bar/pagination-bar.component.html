@@ -1,0 +1,45 @@
+<div class="pagination-bar">
+  <div [routerLink]="['/home', activePage - 1]"
+       [class.disabled] = "activePage - 1 < 0"
+       *ngIf="true">Prev</div>
+
+  <div [routerLink]="['/home', activePage - 4]"
+       [class.disabled] = "activePage - 4 < 0"
+       *ngIf="(activePage - 4 >= 0) && (activePage + 1 > nbPages - 1)">{{ activePage - 4 }}</div>
+
+  <div [routerLink]="['/home', activePage - 3]"
+       [class.disabled] = "activePage - 3 < 0"
+       *ngIf="(activePage - 3 >= 0) && (activePage + 2 > nbPages - 1)">{{ activePage - 3 }}</div>
+
+  <div [routerLink]="['/home', activePage - 2]"
+       [class.disabled] = "activePage - 2 < 0"
+       *ngIf="activePage - 2 >= 0">{{ activePage - 2 }}</div>
+
+  <div [routerLink]="['/home', activePage - 1]"
+       [class.disabled] = "activePage - 1 < 0"
+       *ngIf="activePage - 1 >= 0">{{ activePage - 1 }}</div>
+
+  <div class="active" >{{ activePage }}</div>
+
+  <div [routerLink]="['/home', activePage + 1]"
+       [class.disabled] = "activePage + 1 > nbPages - 1"
+       *ngIf="activePage + 1 < nbPages">{{ activePage + 1 }}</div>
+
+  <div [routerLink]="['/home', activePage + 2]"
+       [class.disabled] = "activePage + 2 > nbPages - 1"
+       *ngIf="activePage + 2 < nbPages">{{ activePage + 2 }}</div>
+
+  <div [routerLink]="['/home', activePage + 2]"
+       [class.disabled] = "activePage + 3 > nbPages - 1"
+       *ngIf="(activePage + 3 < nbPages) && (activePage - 2 < 0)">{{ activePage + 3 }}</div>
+
+  <div [routerLink]="['/home', activePage + 2]"
+       [class.disabled] = "activePage + 4 > nbPages - 1"
+       *ngIf="(activePage + 4 < nbPages) && (activePage - 1 < 0)">{{ activePage + 4 }}</div>
+
+  <div [routerLink]="['/home', activePage + 1]"
+       [class.disabled] = "activePage + 1 > nbPages - 1"
+       *ngIf="true">Next</div>
+
+</div>
+

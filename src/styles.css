@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+html[theme= 'light'] {
+  --primary-background-color: #FFFFFF;
+  --secondary-background-color: #E9EEF4;
+  --primary-text-color: #494D51;
+  --secondary-text-color: #5B6362;
+  --accent-color: #00B283;
+  --box-shadow-color : 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --box-shadow-hover-color : 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
+
+}
+html[theme= "dark"] {
+  --primary-background-color: #1F3759;
+  --secondary-background-color: #0E2546;
+  --primary-text-color: #FFFFFF;
+  --secondary-text-color: #CAD0D8;
+  --accent-color: #58D3B3;
+  --box-shadow-color : 0 1px 3px rgba(0,0,0,0.42), 0 1px 2px rgba(0,0,0,0.54);
+  --box-shadow-hover-color : 0 3px 6px rgba(0,0,0,0.46), 0 3px 6px rgba(0,0,0,0.53);
+}
+html.color-theme-in-transition,
+html.color-theme-in-transition *,
+html.color-theme-in-transition *:before,
+html.color-theme-in-transition *:after {
+  transition: all 500ms !important;
+  transition-delay: 0s !important;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--secondary-background-color);
+}
+

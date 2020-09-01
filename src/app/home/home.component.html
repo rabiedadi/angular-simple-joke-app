@@ -1,0 +1,23 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="jokes-container">
+
+  <input (input)="filterJokes()" [(ngModel)]="sLoader.searchKeys"
+         class="search-input"
+         placeholder="search by keywords here"
+         type="search">
+  <div *ngIf="!sLoader.filteredJokes">Loading ...</div>
+
+  <ng-container *ngIf="sLoader.filteredJokes">
+    <ng-container *ngFor="let x of ' '.repeat(5).split(' '); let i = index">
+      <div *ngIf="sLoader.filteredJokes[activePage * 6 + i]" [routerLink]="['/detail', sLoader.filteredJokes[activePage * 6 + i]['id']]"
+           class="joke-card">
+        <h4>Joke {{ sLoader.filteredJokes[activePage * 6 + i]['id'] }}</h4>
+        <p>{{ sLoader.filteredJokes[activePage * 6 + i]['joke'] }}</p>
+      </div>
+    </ng-container>
+  </ng-container>
+
+</div>
+
+<app-pagination-bar [nbPages]="sLoader.filteredJokes?.length / 6 - 1 || 0"></app-pagination-bar>
