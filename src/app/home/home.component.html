@@ -6,7 +6,7 @@
          class="search-input"
          placeholder="search by keywords here"
          type="search">
-  <div *ngIf="!sLoader.filteredJokes">Loading ...</div>
+  <div style="color: var(--primary-text-color)" *ngIf="!sLoader.filteredJokes">Loading ...</div>
 
   <ng-container *ngIf="sLoader.filteredJokes">
     <ng-container *ngFor="let x of ' '.repeat(5).split(' '); let i = index">
