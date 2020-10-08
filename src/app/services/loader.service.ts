@@ -19,7 +19,7 @@ export class LoaderService implements OnDestroy{
   }
 
   fetchJokes() {
-    this.http.get<any>('http://api.icndb.com/jokes/random/1000').pipe(
+    this.http.get<any>('https://api.icndb.com/jokes/random/1000').pipe(
       takeUntil(this.$destroyed),
       map(res => res.value)
     ).subscribe(
@@ -31,7 +31,7 @@ export class LoaderService implements OnDestroy{
   }
 
   fetchJokeDetail(id): Observable<any> {
-    return this.http.get<any>(`http://api.icndb.com/jokes/${id}`).pipe(
+    return this.http.get<any>(`https://api.icndb.com/jokes/${id}`).pipe(
       map(res => res.value)
     );
   }
