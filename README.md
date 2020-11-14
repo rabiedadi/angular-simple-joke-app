@@ -10,6 +10,8 @@ A simple app to implement dark and light mode and fetch requests from REST API
 the app is deployed on `Netlify`
 [JOKES](https://angular-light-dark-mode.netlify.app/home)
 
+___
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
